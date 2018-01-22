@@ -27,3 +27,24 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+test {
+	outputs.upToDateWhen { false }
+	testLogging {
+		// Make sure output from
+		// standard out or error is shown
+		// in Gradle output.
+		showStandardStreams = true
+ 
+		// Or we use events method:
+		// events 'standard_out', 'standard_error'
+ 
+		// Or set property events:
+		// events = ['standard_out', 'standard_error']
+ 
+		// Instead of string values we can
+		// use enum values:
+		// events org.gradle.api.tasks.testing.logging.TestLogEvent.STANDARD_OUT,
+		//        org.gradle.api.tasks.testing.logging.TestLogEvent.STANDARD_ERROR,
+	}
+}

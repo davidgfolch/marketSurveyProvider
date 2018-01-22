@@ -1,1 +1,2 @@
 # marketSurveyProvider
+./gradlew test
