@@ -1,5 +1,6 @@
 package es.davidgfolch.caravelo.marketingResearchSystem.marketSurveyProvider;
 
+import static org.assertj.core.api.Assertions.fail;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -106,7 +107,7 @@ public class MarketSurveyProviderApplicationTests {
 					.andDo(print()) //
 					.andExpect(status().isCreated());
 		} catch (Exception e) {
-			e.printStackTrace();
+			fail("Can't add result: "+survey, e);
 		}
 	}
 
@@ -118,7 +119,7 @@ public class MarketSurveyProviderApplicationTests {
 					.andDo(print()) //
 					.andExpect(status().isCreated());
 		} catch (Exception e) {
-			e.printStackTrace();
+			fail("Can't add result: "+result, e);
 		}
 	}
 

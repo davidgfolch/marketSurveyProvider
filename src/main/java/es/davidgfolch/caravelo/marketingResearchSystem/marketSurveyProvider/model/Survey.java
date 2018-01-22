@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class Survey implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -27,7 +24,6 @@ public class Survey implements Serializable {
 	public String getSubject() {
 		return subject;
 	}
-	@JsonProperty
 	public void setSubject(String subject) {
 		this.subject = subject;
 	}

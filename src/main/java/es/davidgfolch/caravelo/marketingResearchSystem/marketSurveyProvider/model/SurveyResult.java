@@ -2,11 +2,15 @@ package es.davidgfolch.caravelo.marketingResearchSystem.marketSurveyProvider.mod
 
 import java.io.Serializable;
 
+import lombok.NonNull;
+
 public class SurveyResult implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	@NonNull
 	private Object result;
+	@NonNull
 	private Survey survey;
 
 	private SurveyResult() {
